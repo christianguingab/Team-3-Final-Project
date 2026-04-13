@@ -38,7 +38,7 @@ class Main:
             else:
                 attempt -=1
                 self.clear_terminal()
-                print('Invalid Username or Password.')
+                print('Invalid Username or Password.\n')
         print('Access Denied. Exiting program...')
         exit()
          
