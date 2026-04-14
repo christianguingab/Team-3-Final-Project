@@ -1,14 +1,14 @@
 # 💫 About Me:
-                                   👻 We are the TEAM 3 from CPE12S1 in TIPQC! 👻
-                                            Introducing our Final Project                                 
+                                      👻 We are the TEAM 3 from CPE12S1 in TIPQC! 👻
+                                              Introducing our Final Project                                 
                                      
-                                    WE are creating a PASSWORD GENERATOR MANAGER     
-                                     Guess what? 👀 It can generate a password  
-                                and manage your account as well, you can create as 
-                                    many as you like, and our system will make
-                                                sure to save it.
+                                      WE are creating a PASSWORD GENERATOR MANAGER     
+                                       Guess what? 👀 It can generate a password  
+                                  and manage your account as well, you can create as 
+                                      many as you like, and our system will make
+                                                  sure to save it.
                                 
-                                    Without FURTHER A DO, Enjoy our Project 🫦
+                                      Without FURTHER A DO, Enjoy our Project 🫦
  
 
 # 💻 Tech Stack:
