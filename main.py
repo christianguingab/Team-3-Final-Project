@@ -1,3 +1,4 @@
+from PasswordStorage import PasswordStorage
 from sys import exit
 import os
 
@@ -34,6 +35,7 @@ class Main:
             password = input('Input Password: ')
 
             if username in self.accounts and self.accounts[username]==password:
+                self.clear_terminal()
                 start.Manager_Storage_menu()
             else:
                 attempt -=1
@@ -61,6 +63,7 @@ class Main:
                 print("Inavlid Input!")
 
     def Manager_Storage_menu(self):
+        self.clear_terminal()
         while True:
             print('Please Choose From The Choices')
             print('1.Password Manager Menu')
@@ -72,6 +75,7 @@ class Main:
                 self.Password_Manager()
 
             elif choice1 == 2:
+                self.clear_terminal()
                 self.Password_Storage()
                 
             elif choice1 == 3:
@@ -109,6 +113,7 @@ class Main:
                 print("You Selected an Inavlid Input!")
 
     def Password_Storage(self):
+        self.storage = PasswordStorage()
         while True:
             print('Choose A Function')
             print('1.Display All Passwords')
@@ -120,16 +125,27 @@ class Main:
             choice2 = int(input('Choice: '))
 
             if choice2 == 1:
-                print('You Selected Choose A Function') #to be changed
+                self.storage.view()
 
             elif choice2 == 2:
-                print('You Selected Add a Password') #to be changed
+                self.clear_terminal()
+                print('--------Add a Password--------')
+                title = input('Input Title: ')
+                password =input('Input Password: ')
+                self.storage.add(title,password)
                 
             elif choice2 == 3:
-                print('You Selected Update a Password') #to be changed
+                self.clear_terminal()
+                print('--------Update a Password--------')
+                title = input('Input Title: ')
+                new_password = input('Input New Password: ')
+                self.storage.update(title,new_password)
 
             elif choice2 == 4:
-                print('You Selected Delete a Password') #to be changed
+                self.clear_terminal()
+                print('--------Delete a Password--------')
+                title = input('Input Title: ')
+                self.storage.delete(title)
 
             elif choice2 == 5: 
                 self.Manager_Storage_menu()
