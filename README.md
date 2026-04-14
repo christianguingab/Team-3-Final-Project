@@ -1,15 +1,15 @@
 # 💫 About Us:                                                                                     
                                                                                                .  
-                      👻 We are the TEAM 3 from CPE12S1 in TIPQC! 👻                                   .            
-            .                  Introducing our Final Project            .  ___________________     ____________
-                                                                          /                  /    /______      / 
-                       WE are creating a PASSWORD GENERATOR MANAGER      /_____        _____/           /     /  . 
-                        Guess what? 👀 It can generate a password             /      /    .         /__     /
-       .           and manage your account as well, you can create as        /      /             _____/   / 
-                       many as you like, and our system will make           /______/           /_________ /    .
-                                 sure to save it.                     .   
+                 👻 We are the TEAM 3 from CPE12S1 in TIPQC! 👻                                   .            
+       .                  Introducing our Final Project            .  ___________________     ____________
+                                                                     /                  /    /______      / 
+                  WE are creating a PASSWORD GENERATOR MANAGER      /_____        _____/           /     /  . 
+                   Guess what? 👀 It can generate a password             /      /    .         /__     /
+              and manage your account as well, you can create as        /      /             _____/   / 
+                  many as you like, and our system will make           /______/           /_________ /    .
+                           sure to save it.                     .   
              .                                                                                       .   
-                      Without FURTHER A DO, Enjoy our Project 🫦                 .  
+                  Without FURTHER A DO, Enjoy our Project 🫦                 .  
  
 
 # 💻 Tech Stack:
