@@ -1,6 +1,7 @@
 from PasswordStorage import PasswordStorage
 from sys import exit
 import os
+import random
 
 class Main:
     def __init__(self):
@@ -105,13 +106,23 @@ class Main:
                 print('You Selected Personalized Password Generator') #to be changed
 
             elif choice2 == 4:
-                print('You Selected Strengthen Password') #to be changed
+                self.Strengthen_Manager()
 
             elif choice2 == 5: 
                 self.Manager_Storage_menu()
             else:
                 print("You Selected an Inavlid Input!")
 
+
+
+    def Strengthen_Manager(self):
+        print('Enter a password that will be strengthened')
+        password = input('Password: ')
+        while len(password) < 12 or not any(char.isdigit() for char in password) or not any(char in '!@#$%^&*()' for char in password) or not any(char.isalpha() for char in password):  
+            password = password.capitalize() + str(random.randint(50,599)) + str(random.choice('!@#$%^&*()')) + random.choice('abcdefghijklmnopqrstuvwxyz')
+        else:
+            print('New password created: ' + password)
+   
     def Password_Storage(self):
         self.storage = PasswordStorage()
         while True:
@@ -152,5 +163,8 @@ class Main:
                 
             else:
                 print("You Selected an Inavlid Input!")
+        
+        
+
 start = Main() 
 start.start_menu()
