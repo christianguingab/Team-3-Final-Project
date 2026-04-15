@@ -165,7 +165,7 @@ class Main:
             else:
                 print("You Selected an Inavlid Input!")
 
-def main():
+def PasswordGenerator ():
     manager = PasswordGenerator()
 
     # 1. Generate Strong Password
