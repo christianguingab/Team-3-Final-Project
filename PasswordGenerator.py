@@ -41,22 +41,3 @@ class PasswordGenerator:
             return password
         # Appends 4 random strong characters to improve it
         return password + self.generate_strong_password(4)
-    
-#menu simulation
-manager = PasswordGenerator()
-
-# 1. Generate Strong Password
-new_pass = manager.generate_strong_password()
-print(f"Generated: {new_pass}")
-
-# 2. Analyze Password
-status = manager.analyze_password("123abcABC!")
-print(f"Strength: {status}")
-
-# 3. Personalized Generator
-personal = manager.personalized_generator(["Summer", "2024"])
-print(f"Personalized: {personal}")
-
-# 4. Strengthen Password
-better_pass = manager.strengthen_password("qwerty")
-print(f"Strengthened: {better_pass}")
