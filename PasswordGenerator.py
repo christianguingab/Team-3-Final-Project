@@ -1,5 +1,7 @@
 from Password import Password
 import os
+import string
+import random
 
 class PasswordGenerator:
     def __init__(self):
