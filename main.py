@@ -1,4 +1,5 @@
 from PasswordStorage import PasswordStorage
+from PasswordGenerator import PasswordGenerator 
 from sys import exit
 import os
 import random
@@ -163,6 +164,24 @@ class Main:
                 
             else:
                 print("You Selected an Inavlid Input!")
+
+def PasswordGenerator ():
+    manager = PasswordGenerator()
+
+    # 1. Generate Strong Password
+    print(f"Generated: {manager.generate_strong_password()}")
+
+    # 2. Analyze Password
+    print(f"Strength: {manager.analyze_password('123abcABC!')}")
+
+    # 3. Personalized Generator
+    print(f"Personalized: {manager.personalized_generator(['Summer', '2024'])}")
+
+    # 4. Strengthen Password
+    print(f"Strengthened: {manager.strengthen_password('qwerty')}")
+
+if __name__ == "__main__":
+    main()
         
         
 
