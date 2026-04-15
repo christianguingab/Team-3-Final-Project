@@ -37,11 +37,12 @@ class PasswordGenerator:
         padding = self.generate_strong_password(length - len(base))
         return base + padding
 
-    def strengthen_password(self, password):
-        """Option 4: Adds extra complexity to an existing password."""
-        if self.analyze_password(password) == "Very Strong":
-            return password
-        # Appends 4 random strong characters to improve it
-        return password + self.generate_strong_password(4)
+    def Strengthen_Manager(self):
+        print('Enter a password that will be strengthened')
+        password = input('Password: ')
+        while len(password) < 12 or not any(char.isdigit() for char in password) or not any(char in '!@#$%^&*()' for char in password) or not any(char.isalpha() for char in password):  
+            password = password.capitalize() + str(random.randint(50,599)) + str(random.choice('!@#$%^&*()')) + random.choice('abcdefghijklmnopqrstuvwxyz')
+        else:
+            print('New password created: ' + password)
         
   
