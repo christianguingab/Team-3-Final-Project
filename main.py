@@ -1,4 +1,5 @@
 from PasswordStorage import PasswordStorage
+from PasswordGenerator import PasswordGenerator 
 from sys import exit
 import os
 import random
