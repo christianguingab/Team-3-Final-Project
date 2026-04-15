@@ -1,12 +1,7 @@
 from Password import Password
-<<<<<<< HEAD
-import os
-import string
-import random
-=======
+
 import string
 import random 
->>>>>>> 78fbbe537b79bc93df96bef78167433524f12155
 
 class PasswordGenerator:
     def __init__(self):
@@ -29,7 +24,7 @@ class PasswordGenerator:
         if any(c in self.digits for c in password): score += 1
         if any(c in self.symbols for c in password): score += 1
         if len(password) >= 12: score += 1
-        
+            
         strengths = {1: "Very Weak", 2: "Weak", 3: "Moderate", 4: "Strong", 5: "Very Strong"}
         return strengths.get(score, "Very Weak")
 
@@ -48,9 +43,5 @@ class PasswordGenerator:
             return password
         # Appends 4 random strong characters to improve it
         return password + self.generate_strong_password(4)
-
-print(f"Personalized: {personal}")
-
-# 4. Strengthen Password
-better_pass = manager.strengthen_password("qwerty")
-print(f"Strengthened: {better_pass}")
+        
+  
