@@ -1,3 +1,6 @@
 class PasswordGenerator:
-    def generate(self):
-        pass
+    def read(self):
+        print ("default read")
+
+    def write(self):
+        print ("default write")
