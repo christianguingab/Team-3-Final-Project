@@ -56,7 +56,7 @@ class Main:
             print('1.Login')
             print('2.Create Account')
             print('3.Exit')
-            choice = int(input('Choice: '))
+            
             try: 
                 choice = int(input('Choice:'))
                 if choice == 1:
@@ -119,7 +119,7 @@ class Main:
                 print('You Selected Personalized Password Generator') #to be changed
 
             elif choice2 == 4:
-                print('strengthen')#changethis
+                print('strengthen')#change this
 
             elif choice2 == 5: 
                 self.Manager_Storage_menu()
@@ -167,8 +167,6 @@ class Main:
                 
             else:
                 print("You Selected an Inavlid Input!")
-
-
 
         
 if __name__ == "__main__":
