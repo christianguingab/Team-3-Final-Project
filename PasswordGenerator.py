@@ -1,5 +1,6 @@
 from Password import Password
-import os
+import string
+import random 
 
 class PasswordGenerator:
     def __init__(self):
@@ -41,3 +42,9 @@ class PasswordGenerator:
             return password
         # Appends 4 random strong characters to improve it
         return password + self.generate_strong_password(4)
+
+print(f"Personalized: {personal}")
+
+# 4. Strengthen Password
+better_pass = manager.strengthen_password("qwerty")
+print(f"Strengthened: {better_pass}")
