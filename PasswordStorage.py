@@ -13,6 +13,8 @@ class PasswordStorage(Password):
         else:
             self.clear_terminal()
             print('--------Stored Passwords--------')
+            print('Title    Password')
+            print('--------------------------------')
             for title,password in self.__passwords.items():
                 print(title,':',password.get_password()) 
             print('\n')

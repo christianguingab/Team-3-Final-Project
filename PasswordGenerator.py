@@ -1,7 +1,4 @@
-from Password import Password
-
 import string
-import random 
 
 class PasswordGenerator:
     def __init__(self):
@@ -11,38 +8,6 @@ class PasswordGenerator:
         self.digits = string.digits
         self.symbols = string.punctuation
 
-    def generate_strong_password(self, length=12):
-        """Option 1: Generates a random, secure password."""
-        all_chars = self.lowercase + self.uppercase + self.digits + self.symbols
-        return ''.join(random.choice(all_chars) for _ in range(length))
-
-    def analyze_password(self, password):
-        """Option 2: Checks the strength of a password."""
-        score = 0
-        if any(c in self.lowercase for c in password): score += 1
-        if any(c in self.uppercase for c in password): score += 1
-        if any(c in self.digits for c in password): score += 1
-        if any(c in self.symbols for c in password): score += 1
-        if len(password) >= 12: score += 1
-            
-        strengths = {1: "Very Weak", 2: "Weak", 3: "Moderate", 4: "Strong", 5: "Very Strong"}
-        return strengths.get(score, "Very Weak")
-
-    def personalized_generator(self, keywords, length=16):
-        """Option 3: Creates a password using specific user inputs."""
-        base = "".join(keywords)
-        if len(base) >= length:
-            return base[:length]
-        # Fills the rest of the length with random strong characters
-        padding = self.generate_strong_password(length - len(base))
-        return base + padding
-
-    def Strengthen_Manager(self):
-        print('Enter a password that will be strengthened')
-        password = input('Password: ')
-        while len(password) < 12 or not any(char.isdigit() for char in password) or not any(char in '!@#$%^&*()' for char in password) or not any(char.isalpha() for char in password):  
-            password = password.capitalize() + str(random.randint(50,599)) + str(random.choice('!@#$%^&*()')) + random.choice('abcdefghijklmnopqrstuvwxyz')
-        else:
-            print('New password created: ' + password)
-        
+    def generate(self):
+        pass
   

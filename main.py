@@ -1,14 +1,13 @@
 from PasswordStorage import PasswordStorage
-from PasswordGenerator import PasswordGenerator 
+from StrongPassword import StrongPassword
+from AnalyzePassword import AnalyzePassword
+from StrengthenPassword import StrengthenPassword
 from sys import exit
 import os
-import random
 
 class Main:
     def __init__(self):
         self.accounts = {'username':'password'}
-        self.storage = {}
-        self.generator = PasswordGenerator() 
 
     def clear_terminal(self):
         os.system('cls' if os.name == 'nt' else 'clear')
@@ -58,7 +57,7 @@ class Main:
             print('3.Exit')
             
             try: 
-                choice = int(input('Choice:'))
+                choice = int(input('Choice: '))
                 if choice == 1:
                     self.login()
                 elif choice == 2:
@@ -69,8 +68,6 @@ class Main:
                     print("Inavlid Input!")
             except ValueError:
                 print("Please enter a valid number.")
-
-    
 
     def Manager_Storage_menu(self):
         self.clear_terminal()
@@ -99,8 +96,12 @@ class Main:
                 print("Please enter a valid number")
 
     def Password_Manager(self):
+        Strong = StrongPassword()
+        Analyze = AnalyzePassword()
+        Strengthen = StrengthenPassword()
+        self.clear_terminal()
         while True:
-            print('\n --- Password Manager Menu ---')
+            print(' --- Password Manager Menu ---')
             print('1.Generate Strong Password')
             print('2.Analyze Password')
             print('3.Personalized Password Generator')
@@ -110,27 +111,33 @@ class Main:
             choice2 = int(input('Choice: '))
 
             if choice2 == 1:
-                print('You Selected Generate Strong Password') #to be changed
+                self.clear_terminal()
+                print('--------Strong Password--------')
+                print('Generated Password: ',Strong.generate())
 
             elif choice2 == 2:
-                print('You Selected Analyze Password') #to be changed
+                self.clear_terminal()
+                print('--------Analyze Password--------')
+                print(Analyze.generate())
                 
             elif choice2 == 3:
-                print('You Selected Personalized Password Generator') #to be changed
+                self.clear_terminal()
+                print('pesonalize') # change this
 
             elif choice2 == 4:
-                print('strengthen')#change this
+                self.clear_terminal()
+                print('--------Strengthen Password--------')
+                Strengthen.generate()
 
             elif choice2 == 5: 
                 self.Manager_Storage_menu()
             else:
                 print("You Selected an Inavlid Input!")
 
-   
     def Password_Storage(self):
         self.storage = PasswordStorage()
         while True:
-            print('Choose A Function')
+            print('--------Password Storage--------')
             print('1.Display All Passwords')
             print('2.Add a Password')
             print('3.Update a Password')
@@ -168,11 +175,5 @@ class Main:
             else:
                 print("You Selected an Inavlid Input!")
 
-        
-if __name__ == "__main__":
-
-    start = Main() 
-    start.start_menu()
-
-
-
+start = Main() 
+start.start_menu()
