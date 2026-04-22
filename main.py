@@ -2,6 +2,7 @@ from PasswordStorage import PasswordStorage
 from StrongPassword import StrongPassword
 from AnalyzePassword import AnalyzePassword
 from StrengthenPassword import StrengthenPassword
+from PersonalizedPassword import PersonalizedPassword
 from sys import exit
 import os
 import random
@@ -15,6 +16,7 @@ class Main:
 
     #Handles the account creation feature that can be used to log in
     def create_account(self):
+        self.clear_terminal()
         while True:
             print('--------Create Account--------')
             username = input("Input Username: ")
@@ -117,12 +119,12 @@ class Main:
             if choice2 == 1:
                 self.clear_terminal()
                 print('--------Strong Password--------')
-                print('Generated Password: ',Strong.generate())
+                print('Generated Password: ',Strong.generate(),'\n')
 
             elif choice2 == 2:
                 self.clear_terminal()
                 print('--------Analyze Password--------')
-                print(Analyze.generate())
+                print(Analyze.generate(),'\n')
                 
             elif choice2 == 3:
                 self.clear_terminal()
