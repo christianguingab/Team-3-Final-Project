@@ -4,6 +4,7 @@ from AnalyzePassword import AnalyzePassword
 from StrengthenPassword import StrengthenPassword
 from sys import exit
 import os
+import random
 
 class Main:
     def __init__(self):
