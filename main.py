@@ -102,6 +102,7 @@ class Main:
         Strong = StrongPassword()
         Analyze = AnalyzePassword()
         Strengthen = StrengthenPassword()
+        Personalized = PersonalizedPassword()
         self.clear_terminal()
         while True:
             print(' --- Password Manager Menu ---')
