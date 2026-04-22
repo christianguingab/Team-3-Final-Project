@@ -12,6 +12,7 @@ class Main:
     def clear_terminal(self):
         os.system('cls' if os.name == 'nt' else 'clear')
 
+    #Handles the account creation feature that can be used to log in
     def create_account(self):
         while True:
             print('--------Create Account--------')
@@ -28,6 +29,7 @@ class Main:
         self.clear_terminal()
         print('Successfully created an account!\n')
 
+    #Handles the login feature that terminates the code once 3 wrong attempts are made
     def login(self):
         attempt = 3
         self.clear_terminal()

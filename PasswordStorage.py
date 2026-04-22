@@ -1,6 +1,7 @@
 from Password import Password
 import os
 
+#Handles storing, viewing, adding, updating, and deleting passwords
 class PasswordStorage(Password):
     def __init__(self):
         self.__passwords={}
