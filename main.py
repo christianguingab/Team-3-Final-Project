@@ -126,7 +126,8 @@ class Main:
                 
             elif choice2 == 3:
                 self.clear_terminal()
-                print('pesonalize') # change this
+                print('--------Personalized Password Generator--------') 
+                
 
             elif choice2 == 4:
                 self.clear_terminal()
