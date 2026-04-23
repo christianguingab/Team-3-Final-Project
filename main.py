@@ -3,7 +3,10 @@ from AnalyzePassword import AnalyzePassword
 from PersonalizedPassword import PersonalizedPassword
 from StrengthenPassword import StrengthenPassword
 from PasswordStorage import PasswordStorage
-from PasswordGenerator import PasswordGenerator 
+from StrongPassword import StrongPassword
+from AnalyzePassword import AnalyzePassword
+from StrengthenPassword import StrengthenPassword
+from PersonalizedPassword import PersonalizedPassword
 from sys import exit
 import os
 import random
@@ -11,13 +14,13 @@ import random
 class Main:
     def __init__(self):
         self.accounts = {'username':'password'}
-        self.storage = {}
-        self.generator = PasswordGenerator() 
 
     def clear_terminal(self):
         os.system('cls' if os.name == 'nt' else 'clear')
 
+    #Handles the account creation feature that can be used to log in
     def create_account(self):
+        self.clear_terminal()
         while True:
             print('--------Create Account--------')
             username = input("Input Username: ")
@@ -33,6 +36,7 @@ class Main:
         self.clear_terminal()
         print('Successfully created an account!\n')
 
+    #Handles the login feature that terminates the code once 3 wrong attempts are made
     def login(self):
         attempt = 3
         self.clear_terminal()
@@ -48,7 +52,7 @@ class Main:
             else:
                 attempt -=1
                 self.clear_terminal()
-                print('Invalid Username or Password.\n')
+                print(f'Invalid Username or Password. You have {attempt} attempts left\n')
        
         print('Access Denied. Exiting program...')
         exit()
@@ -62,7 +66,7 @@ class Main:
             print('3.Exit')
             
             try: 
-                choice = int(input('Choice:'))
+                choice = int(input('Choice: '))
                 if choice == 1:
                     self.login()
                 elif choice == 2:
@@ -73,8 +77,6 @@ class Main:
                     print("Inavlid Input!")
             except ValueError:
                 print("Please enter a valid number.")
-
-    
 
     def Manager_Storage_menu(self):
         self.clear_terminal()
@@ -103,8 +105,13 @@ class Main:
                 print("Please enter a valid number")
 
     def Password_Manager(self):
+        Strong = StrongPassword()
+        Analyze = AnalyzePassword()
+        Strengthen = StrengthenPassword()
+        Personalized = PersonalizedPassword()
+        self.clear_terminal()
         while True:
-            print('\n --- Password Manager Menu ---')
+            print(' --- Password Manager Menu ---')
             print('1.Generate Strong Password')
             print('2.Analyze Password')
             print('3.Personalized Password Generator')
@@ -144,11 +151,10 @@ class Main:
          
 
 
-   
     def Password_Storage(self):
         self.storage = PasswordStorage()
         while True:
-            print('Choose A Function')
+            print('--------Password Storage--------')
             print('1.Display All Passwords')
             print('2.Add a Password')
             print('3.Update a Password')
@@ -186,11 +192,5 @@ class Main:
             else:
                 print("You Selected an Inavlid Input!")
 
-        
-if __name__ == "__main__":
-
-    start = Main() 
-    start.start_menu()
-
-
-
+start = Main() 
+start.start_menu()

@@ -1,6 +1,7 @@
 from Password import Password
 import os
 
+#Handles storing, viewing, adding, updating, and deleting passwords
 class PasswordStorage(Password):
     def __init__(self):
         self.__passwords={}
@@ -13,6 +14,8 @@ class PasswordStorage(Password):
         else:
             self.clear_terminal()
             print('--------Stored Passwords--------')
+            print('Title    Password')
+            print('--------------------------------')
             for title,password in self.__passwords.items():
                 print(title,':',password.get_password()) 
             print('\n')
@@ -26,7 +29,7 @@ class PasswordStorage(Password):
     def update(self,title,new_password):
         if title not in self.__passwords:
             self.clear_terminal()
-            print("That title and password does not currently exist,\n")
+            print("That title and password does not currently exist.\n")
         else:
             self.__passwords[title].set_password(new_password)
             self.clear_terminal()
