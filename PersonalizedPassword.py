@@ -6,4 +6,4 @@ class PersonalizedPassword(PasswordGenerator):
         name = input("Enter your name: ")
         year = input("Enter your birth year: ")
         symbol = random.choice("!@#$%")
-        return name + year + symbol
+        return name + year + symbol + random.choice("!@#$%") + random.choice("!@#$%")
