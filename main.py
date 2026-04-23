@@ -1,3 +1,7 @@
+from StrongPassword import StrongPassword
+from AnalyzePassword import AnalyzePassword
+from PersonalizedPassword import PersonalizedPassword
+from StrengthenPassword import StrengthenPassword
 from PasswordStorage import PasswordStorage
 from PasswordGenerator import PasswordGenerator 
 from sys import exit
@@ -107,24 +111,38 @@ class Main:
             print('4.Strengthen Password')
             print('5.Return to menu')
 
-            choice2 = int(input('Choice: '))
+            try:
+                choice2 = int(input('Choice: '))
+            except ValueError:
+                print("Please enter a valid number.")
+                continue
 
             if choice2 == 1:
-                print('You Selected Generate Strong Password') #to be changed
+                generator = StrongPassword()
 
             elif choice2 == 2:
-                print('You Selected Analyze Password') #to be changed
-                
+                generator = AnalyzePassword()
+
             elif choice2 == 3:
-                print('You Selected Personalized Password Generator') #to be changed
+                generator = PersonalizedPassword()
 
             elif choice2 == 4:
-                print('strengthen')#change this
+                generator = StrengthenPassword()
 
-            elif choice2 == 5: 
-                self.Manager_Storage_menu()
+            elif choice2 == 5:
+                return
+
             else:
-                print("You Selected an Inavlid Input!")
+                print("You Selected an Invalid Input!")
+                continue
+
+            
+            result = generator.generate()
+            print(result)
+
+       
+         
+
 
    
     def Password_Storage(self):
