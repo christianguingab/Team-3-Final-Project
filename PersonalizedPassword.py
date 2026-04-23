@@ -3,7 +3,7 @@ from PasswordGenerator import PasswordGenerator
 
 class PersonalizedPassword(PasswordGenerator):
     def generate(self):
-       name = input("Enter your name or nickname: ")
+        name = input("Enter your name or nickname: ")
         year = input("Enter your birth year: ")
         favorite_number = input("Enter your favorite number: ")
         symbol1 = random.choice("!@#$%-_*")

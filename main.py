@@ -52,7 +52,6 @@ class Main:
         print('Access Denied. Exiting program...')
         exit()
          
-    
     def start_menu(self):
         while True:
             print('--------Password Generator Manager---------')
