@@ -122,17 +122,23 @@ class Main:
             elif choice2 == 2:
                 self.clear_terminal()
                 print('--------Analyze Password--------')
-                print(Analyze.generate(),'\n')
+                pwd = input("Enter password to analyze: ")
+                print(Analyze.generate(pwd),'\n')
                 
             elif choice2 == 3:
                 self.clear_terminal()
-                print('--------Personalized Password Generator--------') 
-                print('Generated Password: ',Personalize.generate(),'\n')
+                print('--------Personalized Password Generator--------')
+                name = input("Enter your name or nickname: ")
+                year = input("Enter your birth year: ")
+                favorite_number = input("Enter your favorite number: ")
+                print('Generated Password: ',Personalize.generate(name,year,favorite_number),'\n')
 
             elif choice2 == 4:
                 self.clear_terminal()
                 print('--------Strengthen Password--------')
-                Strengthen.generate()
+                print('Enter a password that will be strengthened')
+                password = input('Password: ')
+                Strengthen.generate(password)
 
             elif choice2 == 5: 
                 self.Manager_Storage_menu()
